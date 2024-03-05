@@ -5,43 +5,51 @@
  */
 public abstract class AbstractRacer
 {
- // instance variables
- private String name;
- private int position;
- /**
- * Constructs an object according to the subclass
- * that inherits from Racer. (You can't construct an
- * actual Racer object because it's abstract. Go ahead,
- * try it!)
- */
- public Racer(String name)
- {
- this.name = name;
- position = 0;
- }
- /**
- * The abstract method move() must be defined by
- * subclasses.
- */
- public abstract void move();
- /**
- * Overrides the toString method
- */
- public String toString()
- {
- // to be completed
- }
- /**
- * The getPosition() method returns the current position
- * of the racer.
- */
+    // instance variables
+    private String name;
+    private int position;
+    /**
+     * Constructs an object according to the subclass
+     * that inherits from Racer. (You can't construct an
+     * actual Racer object because it's abstract. Go ahead,
+     * try it!)
+     */
+    public AbstractRacer(String name)
+    {
+        this.name = name;
+        position = 0;
+    }
 
- // to be completed
- /**
- * The setPosition() method takes a parameter specifying the
- * next position and mutates position to that specified location.
- */
+    /**
+     * The abstract method move() must be defined by
+     * subclasses.
+     */
+    public abstract void move();
+    /**
+     * Overrides the toString method
+     */
+    public String toString()
+    {
+        return ("Racer: " + name + ", Position: " + position);
+    }
 
- // to be completed
+    /**
+     * The getPosition() method returns the current position
+     * of the racer.
+     */
 
+    public int getPosition()
+    {
+        return position;
+    }
+
+    /**
+     * The setPosition() method takes a parameter specifying the
+     * next position and mutates position to that specified location.
+     */
+
+    public void setPosition(int loc)
+    {
+        position = loc;
+    }
 }
